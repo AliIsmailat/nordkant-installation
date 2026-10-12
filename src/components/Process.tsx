@@ -1,14 +1,22 @@
-import { images, site } from '../content'
-import { Picture } from './Picture'
-import { SectionHeading } from './SectionHeading'
+import { images, site } from "../content";
+import { Picture } from "./Picture";
+import { SectionHeading } from "./SectionHeading";
 
 export function Process() {
-  const { process } = site
+  const { process } = site;
   return (
-    <section aria-labelledby="process-rubrik" className="bg-white py-16 sm:py-24">
+    <section
+      id="sa-jobbar-vi"
+      aria-labelledby="process-rubrik"
+      className="bg-white py-16 sm:py-24"
+    >
       <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-16">
         <div>
-          <SectionHeading id="process-rubrik" eyebrow={process.eyebrow} title={process.title} />
+          <SectionHeading
+            id="process-rubrik"
+            eyebrow={process.eyebrow}
+            title={process.title}
+          />
           <ol role="list" className="mt-10 grid gap-6">
             {process.steps.map((step, index) => (
               <li key={step.title} className="flex gap-5">
@@ -31,9 +39,12 @@ export function Process() {
         </div>
 
         <div className="aspect-[4/3] overflow-hidden rounded-ui border-2 border-navy bg-mist shadow-card">
-          <Picture image={images.work1} sizes="(min-width: 1024px) 520px, calc(100vw - 2rem)" />
+          <Picture
+            image={images.work1}
+            sizes="(min-width: 1024px) 520px, calc(100vw - 2rem)"
+          />
         </div>
       </div>
     </section>
-  )
+  );
 }

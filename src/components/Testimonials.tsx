@@ -1,10 +1,14 @@
-import { site } from '../content'
-import { SectionHeading } from './SectionHeading'
+import { site } from "../content";
+import { SectionHeading } from "./SectionHeading";
 
 export function Testimonials() {
-  const { testimonials } = site
+  const { testimonials } = site;
   return (
-    <section aria-labelledby="omdomen-rubrik" className="bg-mist py-16 sm:py-24">
+    <section
+      id="omdomen"
+      aria-labelledby="omdomen-rubrik"
+      className="bg-mist py-16 sm:py-24"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           id="omdomen-rubrik"
@@ -32,5 +36,5 @@ export function Testimonials() {
         <p className="mt-6 text-sm text-muted">{testimonials.note}</p>
       </div>
     </section>
-  )
+  );
 }

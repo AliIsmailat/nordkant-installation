@@ -1,14 +1,18 @@
 const base =
-  'inline-flex items-center justify-center gap-3 border-2 font-display tracking-wide rounded-ui transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none active:translate-x-1 active:translate-y-1 active:shadow-none'
+  'inline-flex items-center justify-center gap-3 border-2 font-display tracking-wide rounded-ui transition-all'
+
+const press =
+  'hover:translate-x-1 hover:translate-y-1 hover:shadow-none active:translate-x-1 active:translate-y-1 active:shadow-none'
 
 const variants = {
-  solid: 'border-navy bg-accent text-navy shadow-block',
-  light: 'border-white bg-accent text-navy shadow-block-light',
-  outline: 'border-navy bg-white text-navy shadow-block',
+  solid: `border-navy bg-accent text-navy shadow-block ${press}`,
+  flat: 'border-navy bg-accent text-navy hover:bg-navy hover:text-white',
+  light: `border-white bg-accent text-navy shadow-block-light ${press}`,
+  outline: `border-navy bg-white text-navy shadow-block ${press}`,
 } as const
 
 const sizes = {
-  sm: 'px-4 py-2.5 text-base',
+  sm: 'px-3 py-2.5 text-sm sm:px-4 sm:text-base',
   lg: 'px-8 py-4 text-lg sm:text-xl',
 } as const
 

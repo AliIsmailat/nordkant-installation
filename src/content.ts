@@ -12,6 +12,10 @@ export interface Service {
   text: string
 }
 
+export interface NavLink {
+  label: string
+  href: string
+}
 export interface Step {
   title: string
   text: string
@@ -51,6 +55,17 @@ export const site = {
   skipLabel: 'Hoppa till innehållet',
   footerText: 'Demo, inte ett riktigt företag',
   footerNote: 'Företaget, omdömena, siffrorna och kontaktuppgifterna är påhittade.',
+  nav: {
+  label: 'Huvudmeny',
+  openLabel: 'Öppna meny',
+  closeLabel: 'Stäng meny',
+  links: [
+    { label: 'Tjänster', href: '#tjanster' },
+    { label: 'Så jobbar vi', href: '#sa-jobbar-vi' },
+    { label: 'Omdömen', href: '#omdomen' },
+    { label: 'Kontakt', href: '#kontakt' },
+  ] satisfies NavLink[],
+},
 
   meta: {
     title: 'Nordkant Installation (Demo) | VVS och el i Malmö',
